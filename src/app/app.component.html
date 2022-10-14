@@ -1,25 +1,101 @@
 <div>
-  <table class="table table-bordered">
+  <table class="table table-bordered table-fixed">
     <thead>
-      <tr *ngFor="let row of tableDemsions">
-        <th>{{row.headers.name}}</th>
-      </tr>
-  
+    <th colspan="2"></th>
+    <ng-container *ngFor="let str of tableDemsions; let i = index">
+      <th>{{str.metaData.items[202108].name}}</th>
+      <th>{{str.metaData.items[202109].name}}</th>
+      <th>{{str.metaData.items[202110].name}}</th>
+      <th>{{str.metaData.items[202111].name}}</th>
+      <th>{{str.metaData.items[202112].name}}</th>
+      <th>{{str.metaData.items[202201].name}}</th>
+    </ng-container>
+   
+    
     </thead>
     <tbody>
-      <tr *ngFor="let row of tableDemsions | values; ">
     
-        <th  rowspan="3"
-        >{{row.metaData.items}}</th>
-        <th>{{row.metaData.dimensions.dx}}</th>
-        <td>{{row.rows}}</td>
-        
+      <ng-container *ngFor="let str of tableDemsions ; let i = index">
 
-      </tr>
+        <tr >
+         <th rowspan="3">{{str.metaData.items['O6uvpzGd5pu'].name}}</th>
+         <th> {{str.metaData.items['Uvn6LCg7dVU'].name}}</th>
+         <td> {{str.rows[i][3]}}</td>
+         <td> {{str.rows[i+1][3]}}</td>
+         <td> {{str.rows[i+2][3]}}</td>
+         <td> {{str.rows[i+3][3]}}</td>
+         <td> {{str.rows[i+4][3]}}</td>
+         <td> {{str.rows[i+5][3]}}</td>
+        </tr>
+        <tr>
+          <th> {{str.metaData.items['OdiHJayrsKo'].name}}</th>
+         
+        </tr>
+        <tr>
+          <th> {{str.metaData.items['sB79w2hiLp8'].name}}</th>
+ 
+        </tr>
+        <tr>
+          <th rowspan="3">{{str.metaData.items['lc3eMKXaEfw'].name}}</th>
+          <th> {{str.metaData.items['Uvn6LCg7dVU'].name}}</th>
+        </tr>
+        <tr>
+          <th> {{str.metaData.items['OdiHJayrsKo'].name}}</th>
+        </tr>
+        <tr>
+          <th> {{str.metaData.items['sB79w2hiLp8'].name}}</th>
+        </tr>
+        
+        <tr>
+          <th rowspan="3">{{str.metaData.items['fdc6uOvgoji'].name}}</th>
+          <th> {{str.metaData.items['Uvn6LCg7dVU'].name}}</th>
+        </tr>
+        <tr>
+          <th> {{str.metaData.items['OdiHJayrsKo'].name}}</th>
+        </tr>
+        <tr>
+          <th> {{str.metaData.items['sB79w2hiLp8'].name}}</th>
+        </tr>
+        <tr >
+          <th rowspan="3">{{str.metaData.items['jUb8gELQApl'].name}}</th>
+          <th> {{str.metaData.items['Uvn6LCg7dVU'].name}}</th>
+        </tr>
+        <tr>
+          <th> {{str.metaData.items['OdiHJayrsKo'].name}}</th>
+        </tr>
+        <tr>
+          <th> {{str.metaData.items['sB79w2hiLp8'].name}}</th>
+        </tr>
+        <tr>
+          <th rowspan="3">{{str.metaData.items['Vth0fbpFcsO'].name}}</th>
+          <th> {{str.metaData.items['Uvn6LCg7dVU'].name}}</th>
+        </tr>
+        <tr>
+          <th> {{str.metaData.items['OdiHJayrsKo'].name}}</th>
+        </tr>
+        <tr>
+          <th> {{str.metaData.items['sB79w2hiLp8'].name}}</th>
+        </tr>
+        <tr >
+          <th rowspan="3">{{str.metaData.items['TEQlaapDQoK'].name}}</th>
+          <th> {{str.metaData.items['Uvn6LCg7dVU'].name}}</th>
+        </tr>
+        <tr>
+          <th> {{str.metaData.items['OdiHJayrsKo'].name}}</th>
+        </tr>
+        <tr>
+          <th> {{str.metaData.items['sB79w2hiLp8'].name}}</th>
+        </tr>
+       
+       
+
+        </ng-container>
+
+      
      
      
     </tbody>
 
   </table>
 </div>
-<router-outlet></router-outlet>
+
